@@ -36,11 +36,14 @@ void datastream_layer_set_icon(DataStreamLayer* datastream_layer, DataStreamIcon
 			layer_remove_from_parent(&datastream_layer->icon_layer.layer.layer);
 			bmp_deinit_container(&datastream_layer->icon_layer);
 		}
-	
+		
 		datastream_layer->icon = icon;
-		bmp_init_container(DATASTREAM_ICONS[icon], &datastream_layer->icon_layer);
-		layer_add_child(&datastream_layer->layer, &datastream_layer->icon_layer.layer.layer);
-		layer_set_frame(&datastream_layer->icon_layer.layer.layer, GRect(0, 0, 32, 32));	
+		if (icon != DATASTREAM_ICON_NOICON)
+		{
+			bmp_init_container(DATASTREAM_ICONS[icon], &datastream_layer->icon_layer);
+			layer_add_child(&datastream_layer->layer, &datastream_layer->icon_layer.layer.layer);
+			layer_set_frame(&datastream_layer->icon_layer.layer.layer, GRect(0, 0, 32, 32));	
+		}
 	}
 }
 

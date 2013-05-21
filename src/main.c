@@ -25,7 +25,8 @@ void success(int8_t port, int8_t icon, const char* data, DictionaryIterator* sen
 {
 	if(port >= 0 && port < DATASTREAM_PORTS)
 	{
-		datastream_layer_set_icon(&(datastream_layer[port]), icon);
+		if (icon >= 0 && icon <= DATASTREAM_ICON_MEAT)
+			datastream_layer_set_icon(&(datastream_layer[port]), icon);
 		datastream_layer_set_data(&(datastream_layer[port]), data);
 	}
 }
