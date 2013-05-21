@@ -112,7 +112,7 @@ static void app_dropped(void* context, AppMessageResult reason)
 
 static void app_received(DictionaryIterator* received, void* context)
 {
-	vibes_short_pulse();
+	// XBUG vibes_short_pulse();
 
 	// Reconnect message (special: no app id)
 	int8_t idxPort = 0;
