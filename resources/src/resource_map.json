@@ -1,0 +1,31 @@
+{
+    "media": [
+        {
+            "defName": "ICON_LOADING",
+            "type": "png",
+            "file": "images/loading.png"
+        },
+        {
+            "defName": "ICON_TEMPERATURE",
+            "type": "png",
+            "file": "images/temperature.png"
+        },
+        {
+            "defName": "ICON_MEAT",
+            "type": "png",
+            "file": "images/meat.png"
+        },
+        {
+            "defName": "ICON_HUMIDITY",
+            "type": "png",
+            "file": "images/humidity.png"
+        },
+        {
+            "defName": "ICON_BBQ",
+            "type": "png",
+            "file": "images/bbq.png"
+        }
+    ],
+    "friendlyVersion": "VERSION",
+    "versionDefName": "APP_RESOURCES"
+}
